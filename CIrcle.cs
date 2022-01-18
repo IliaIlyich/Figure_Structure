@@ -16,10 +16,11 @@ namespace FIgure_Structure
             }
         }
 
-        public Circle(double r)
-        {
-
-
+        public Circle(double X=0, double Y=0, double r=1)
+        {   
+         this.X=X;
+         this.Y=Y;
+         this.r=r;
         }
 
        public double Square() 
