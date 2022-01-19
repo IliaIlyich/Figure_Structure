@@ -10,7 +10,7 @@ namespace FIgure_Structure
              int a=int.Parse(Console.ReadLine());
              object [] Figure = new object [a];
 
-            for (int i=0; i <Figure.Length-1; i++)
+            for (int i=0; i <Figure.Length; i++)
             {
               
               if (i%2==0) 
