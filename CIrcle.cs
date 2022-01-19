@@ -16,10 +16,11 @@ namespace FIgure_Structure
             }
         }
 
-        public Circle(double X=0, double Y=0, double r=1)
+        public Circle(double X, double Y, double r)
         {   
          this.X=X;
          this.Y=Y;
+         if (r<=0) throw new ArgumentException("Круг не может иметь отрицательный радиус");
          this.r=r;
         }
 

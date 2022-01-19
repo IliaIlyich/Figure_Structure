@@ -26,11 +26,13 @@ namespace FIgure_Structure
            }
       }
 
-      public Rectangle (double X=0, double Y=0, double s1=1, double s2=1)
+      public Rectangle (double X, double Y, double s1, double s2)
       {
        this.X=X;
        this.Y=Y;
+       if (s1<=0) throw new ArgumentException("Сторона не может быть 0 или иметь отрицательное значение");
        this.s1=s1;
+       if (s2<=0) throw new ArgumentException("Сторона не может быть 0 или иметь отрицательное значение");
        this.s2=s2;
       }
       
