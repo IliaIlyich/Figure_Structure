@@ -38,7 +38,7 @@ namespace FIgure_Structure
       
       public override string ToString()
       {
-          return String.Format("Прямоугольник имеет координаты [{0}, {1}], стороны {2} и {3}, площадью: {4}", X, Y, s1, s2, Square());
+          return String.Format("Прямоугольник имеет координаты [{0}, {1}], стороны {2} и {3}, площадь: {4}", X, Y, s1, s2, Square());
       }
       public double Square()
       {

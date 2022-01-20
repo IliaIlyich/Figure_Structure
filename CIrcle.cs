@@ -20,7 +20,7 @@ namespace FIgure_Structure
         {   
          this.X=X;
          this.Y=Y;
-         if (r<=0) throw new ArgumentException("Круг не может иметь отрицательный радиус");
+         if (r<=0) throw new ArgumentException("Круг не может иметь нулевой или отрицательный радиус");
          this.r=r;
         }
 
