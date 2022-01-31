@@ -6,6 +6,7 @@ namespace FIgure_Structure
     {
         static void Main(string[] args)
         {  
+             
              Console.WriteLine("Первый круг");
              IFigure Circle1 = new Circle(double.Parse(Console.ReadLine()), double.Parse(Console.ReadLine()), double.Parse(Console.ReadLine()));
              Console.WriteLine(Circle1);
@@ -39,6 +40,8 @@ namespace FIgure_Structure
             {
               Console.WriteLine(figure);
             }
+
+            
         }
     }
 }
