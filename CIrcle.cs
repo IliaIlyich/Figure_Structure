@@ -32,8 +32,6 @@ namespace FIgure_Structure
         public override string ToString()
         {
             return String.Format("Круг имеет координаты [{0}, {1}], радиус {2}, площадь {3}", X, Y, Radius, Square());
-        }
-
-       
+        }       
     }
 }

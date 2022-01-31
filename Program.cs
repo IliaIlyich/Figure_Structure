@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Reflection;
 namespace FIgure_Structure
 {
     class Program
@@ -7,7 +7,7 @@ namespace FIgure_Structure
         static void Main(string[] args)
         {  
              
-             Console.WriteLine("Первый круг");
+             /*Console.WriteLine("Первый круг");
              IFigure Circle1 = new Circle(double.Parse(Console.ReadLine()), double.Parse(Console.ReadLine()), double.Parse(Console.ReadLine()));
              Console.WriteLine(Circle1);
              Console.WriteLine("Второй круг");
@@ -40,8 +40,30 @@ namespace FIgure_Structure
             {
               Console.WriteLine(figure);
             }
-
-            
+*/
+            IFigure C1 = new Circle(1, 2, 3);
+            IFigure R1= new Rectangle(1, 2, 3, 4);
+            ShowProperties(C1);
+            ShowProperties(R1);
+            Console.ReadLine();
         }
+static void ShowProperties(IFigure figure)
+{
+  Type type = figure.GetType();
+  if (type.Name == "Circle") Console.WriteLine("Круг");
+  else if ((type.Name == "Rectangle")) Console.WriteLine("Прямоугольник");
+
+  foreach (PropertyInfo p in type.GetProperties())
+{
+  Console.WriteLine($"Свойство {p.Name} имеет значение { p.GetValue(figure)}");
+}
+Console.WriteLine();
+
+}
+
+
+
+
     }
 }
+
