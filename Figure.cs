@@ -7,8 +7,5 @@ namespace FIgure_Structure
     public double Y { get; set;}
     public double Square();
     
-
-
-
     }
 }

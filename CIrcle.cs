@@ -33,5 +33,14 @@ namespace FIgure_Structure
         {
             return String.Format("Круг имеет координаты [{0}, {1}], радиус {2}, площадь {3}", X, Y, Radius, Square());
         }       
+        public static bool operator == (Circle C1, Circle C2)
+        {
+         return C1.X==C2.X && C1.Y==C2.Y && C1.r==C2.r;
+        }
+        public static bool operator != (Circle C1, Circle C2)
+        {
+           return C1.X!=C2.X || C1.Y!=C2.Y || C1.r!=C2.r;
+        }
+        
     }
 }
