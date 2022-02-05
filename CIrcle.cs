@@ -44,7 +44,7 @@ namespace FIgure_Structure
         
         public override bool Equals(object obj)
         {
-           if (obj == null || this.GetType() != obj.GetType())
+           if (this.GetType() != obj.GetType()) // obj == null - удално, так как не актуально для структуры
             {
                 return false;
             } 
