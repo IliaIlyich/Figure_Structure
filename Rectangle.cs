@@ -45,5 +45,30 @@ namespace FIgure_Structure
       {
           return s1*s2;
       }
+
+public static bool operator == (Rectangle R1, Rectangle R2)
+        {
+         return R1.X==R2.X && R1.Y==R2.Y && R1.s1==R2.s1 && R1.s2==R2.s2;
+        }
+        public static bool operator != (Rectangle R1, Rectangle R2)
+        {
+           return R1.X!=R2.X || R1.Y!=R2.Y || R1.s1!=R2.s1 || R1.s2!=R2.s2;
+        }
+        
+        public override bool Equals(object obj)
+        {
+           if (obj == null || this.GetType() != obj.GetType())
+            {
+                return false;
+            } 
+            Rectangle rectangle = (Rectangle)obj;
+            return this.X==rectangle.X && this.Y==rectangle.Y && this.s1 == rectangle.s1 && this.s2 == rectangle.s2;
+        }
+        
+        public override int GetHashCode()
+        {
+            return (this.Square()).GetHashCode();
+        }
+
     }
 }

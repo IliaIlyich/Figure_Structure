@@ -1,18 +1,16 @@
 ﻿<Properties StartupConfiguration="{4D60A617-1231-4534-B8B1-D2CB2938616C}|Default">
   <MonoDevelop.Ide.ItemProperties.FIgure__Structure PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="obj/Debug/net5.0/FIgure_Structure.AssemblyInfo.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CIrcle.cs">
     <Files>
       <File FileName="Program.cs" Line="1" Column="1" />
-      <File FileName="obj/Debug/net5.0/FIgure_Structure.AssemblyInfo.cs" Line="14" Column="12" />
-      <File FileName="Rectangle.cs" Line="1" Column="1" />
-      <File FileName=".gitignore" Line="1" Column="1" />
+      <File FileName="CIrcle.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FIgure_Structure" expanded="True">
             <Node name="FIgure_Structure" expanded="True">
-              <Node name="Rectangle.cs" selected="True" />
+              <Node name="CIrcle.cs" selected="True" />
             </Node>
           </Node>
         </State>

@@ -42,5 +42,20 @@ namespace FIgure_Structure
            return C1.X!=C2.X || C1.Y!=C2.Y || C1.r!=C2.r;
         }
         
+        public override bool Equals(object obj)
+        {
+           if (obj == null || this.GetType() != obj.GetType())
+            {
+                return false;
+            } 
+            Circle circle = (Circle)obj;
+            return this.X==circle.X && this.Y==circle.Y && this.r == circle.r;
+        }
+        
+        public override int GetHashCode()
+        {
+            return (this.Square()).GetHashCode();
+        }
+        
     }
 }
