@@ -48,16 +48,16 @@ namespace FIgure_Structure
 
 public static bool operator == (Rectangle R1, Rectangle R2)
         {
-         return R1.X==R2.X && R1.Y==R2.Y && R1.s1==R2.s1 && R1.s2==R2.s2;
+         return R1.Equals(R2);
         }
         public static bool operator != (Rectangle R1, Rectangle R2)
         {
-           return R1.X!=R2.X || R1.Y!=R2.Y || R1.s1!=R2.s1 || R1.s2!=R2.s2;
+           return !R1.Equals(R2);
         }
         
         public override bool Equals(object obj)
         {
-           if (this.GetType() != obj.GetType()) // obj == null - удално, так как не актуально для структуры 
+           if (obj == null || this.GetType() != obj.GetType()) // obj == null - удално, так как не актуально для структуры 
             {
                 return false;
             } 
@@ -67,7 +67,7 @@ public static bool operator == (Rectangle R1, Rectangle R2)
         
         public override int GetHashCode()
         {
-            return (this.Square()).GetHashCode();
+            return this.X.GetHashCode()^this.Y.GetHashCode()^this.s1.GetHashCode()^this.s2.GetHashCode();
         }
 
     }

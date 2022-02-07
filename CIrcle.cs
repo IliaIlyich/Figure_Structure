@@ -35,16 +35,16 @@ namespace FIgure_Structure
         }       
         public static bool operator == (Circle C1, Circle C2)
         {
-         return C1.X==C2.X && C1.Y==C2.Y && C1.r==C2.r;
+         return C1.Equals(C2);
         }
         public static bool operator != (Circle C1, Circle C2)
         {
-           return C1.X!=C2.X || C1.Y!=C2.Y || C1.r!=C2.r;
+           return !C1.Equals(C2);
         }
         
         public override bool Equals(object obj)
         {
-           if (this.GetType() != obj.GetType()) // obj == null - удално, так как не актуально для структуры
+           if (obj == null || this.GetType() != obj.GetType() ) 
             {
                 return false;
             } 
@@ -54,7 +54,7 @@ namespace FIgure_Structure
         
         public override int GetHashCode()
         {
-            return (this.Square()).GetHashCode();
+            return this.X.GetHashCode()^this.Y.GetHashCode()^this.r.GetHashCode();
         }
         
     }
